@@ -1,10 +1,9 @@
 import { Suspense } from "react"
 import User from "../components/User"
+import { getUsers } from "./getUsers"
 
 const Users = async () => {
-  const response = await fetch('https://randomuser.me/api/?results=7')
-  const parsedRes = await response.json()
-  const users = parsedRes.results
+  const users = await getUsers()
 
   return (
     <Suspense>

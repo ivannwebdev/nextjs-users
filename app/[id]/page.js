@@ -1,9 +1,9 @@
 import { Suspense } from "react"
+import { getUsers } from "../getUsers"
 
 const UserDetails = async ({ params }) => {
-  const response = await fetch('https://randomuser.me/api/?results=7')
-  const parsedRes = await response.json()
-  const users = parsedRes.results
+  const users = await getUsers()
+
   const id = params.id
   const user = users[id - 1]
   const picture = user.picture.large

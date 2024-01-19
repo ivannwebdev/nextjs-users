@@ -1,16 +1,6 @@
 import { Suspense } from "react"
 import User from "../components/User"
 
-// export async function getUsers() {
-//   const response = await fetch('https://randomuser.me/api/?results=7')
-
-//   if (!response.ok) throw new Error('Failed to fetch')
-
-//   const parsedRes = await response.json()
-
-//   return parsedRes.results
-// }
-
 const Users = async () => {
   const response = await fetch('https://randomuser.me/api/?results=7')
   const parsedRes = await response.json()
@@ -44,15 +34,3 @@ const Users = async () => {
 }
 
 export default Users
-
-// export async function getServerSideProps() {
-//   const response = await fetch('https://randomuser.me/api/?results=7')
-//   const parsedRes = await response.json()
-//   const users = parsedRes.results
-
-//   return {
-//     props: {
-//       users
-//     }
-//   }
-// }

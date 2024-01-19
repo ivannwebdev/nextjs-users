@@ -1,7 +1,9 @@
 import { cache } from "react"
 
+export const dynamic = 'force-dynamic'
+
 async function fetchUsers() {
-  const response = await fetch('https://randomuser.me/api/?results=7', {cache: 'force-cache'})
+  const response = await fetch('https://randomuser.me/api/?results=7')
 
   if (!response.ok) throw new Error('Failed to fetch')
 

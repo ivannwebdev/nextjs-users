@@ -1,9 +1,7 @@
 import { cache } from "react"
 
-export const revalidate = 0
-
 async function fetchUsers() {
-  const response = await fetch('https://randomuser.me/api/?results=7')
+  const response = await fetch('https://randomuser.me/api/?results=7', { credentials: 'include' })
 
   if (!response.ok) throw new Error('Failed to fetch')
 

@@ -1,6 +1,6 @@
 import { cache } from "react"
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 async function fetchUsers() {
   const response = await fetch('https://randomuser.me/api/?results=7')

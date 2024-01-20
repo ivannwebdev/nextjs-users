@@ -2,6 +2,8 @@ import { Suspense } from "react"
 import User from "../components/User"
 import { getUsers } from "./getUsers"
 
+export const dynamic = 'force-dynamic'
+
 const Users = async () => {
   const users = await getUsers()
 
